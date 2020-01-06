@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-9 text-primary">
+            <h5 mat-dialog-title class="text-primary">Add/Edit Customer</h5>
+        </div>
+    </div>
+
+    <form [formGroup]="UserAddEditForm" (ngSubmit)="submitForm(UserAddEditForm.value)">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <label for="userName" class="col-sm-4 col-form-label">User Name: </label>
+                    <div class="form-group col-sm-8">
+                        <input type="userName" [(ngModel)]="currUser.userName" formControlName="userName"
+                            class="form-control col-md-8" id="userName">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="row">
+                    <label for="userNo" class="col-sm-4 col-form-label">User No: </label>
+                    <div class="form-group col-sm-8">
+                        <input type="userNo" [(ngModel)]="currUser.userNo" formControlName="userNo"
+                            class="form-control col-md-8" id="userNo">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+                <div class="col-md-8"></div>
+                <div class="col-md-4 float-right">
+                    <input class="btn btn-primary" type="submit"
+                        value="Save">
+                    &nbsp;
+                    <input class="btn btn-primary" (click)="cancelEdit()" type="button"
+                        value="Close">
+                </div>
+            </div>
+    </form>

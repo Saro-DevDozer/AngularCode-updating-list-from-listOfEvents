@@ -1,0 +1,55 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-primary font-weight-bold py-4">Users</h3>
+        </div>
+        <div class="col-md-12 offset-md-10">
+            <button type="button" class="btn btn-primary" (click)="openNewUser()">New User</button>
+        </div>
+
+        <!-- <div class="col-md-12 offset-md-10">
+            <button type="button"(click)="getEvents()">Test</button>
+        </div> -->
+        &nbsp;
+        <table mdbTable id="userTable" class="table table-bordered table-responsive-md table-striped text-center">
+            <thead>
+                <tr>
+                    <th class="text-center">User Name</th>
+                    <th class="text-center">User No</th>
+                    <th class="text-center">Created Date</th>
+                    <th class="text-center">Modified Date</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+
+            <tbody *ngIf="allUsers?.length">
+                <tr *ngFor="let user of allUsers">
+                    <td>
+                        <span>{{user.userName}}</span>
+                    </td>
+                    <td>
+                        <span>{{user.userNo}}</span>
+                    </td>
+                    <td>
+                        <span>{{user.createdDate}}</span>
+                    </td>
+                    <td>
+                        <span>{{user.modifiedDate }}</span>
+                    </td>
+                    <td>
+                        <span class="table-remove">
+                            <!-- <button type="button" class="btn btn-default" (click)="editRow(user)"><i
+                                    class="fa fa-pencil" aria-hidden="true"></i></button> -->
+
+                            <button type="button" class="btn btn-default" (click)="editRow(user)">Edit</button>
+                        </span> &nbsp;
+                        <span class="table-remove">
+                            <button type="button" class="btn btn-default"
+                                (click)="removeRow(user.userId)">Delete</button>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
