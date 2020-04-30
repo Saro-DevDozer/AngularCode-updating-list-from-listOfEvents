@@ -28,7 +28,7 @@
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
     "guid-typescript": "^1.0.9",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ng2-smart-table": "^1.4.0",
     "rxjs": "~6.5.2",
     "rxjs-compat": "^6.5.2",
